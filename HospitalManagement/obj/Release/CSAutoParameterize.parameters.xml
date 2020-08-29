@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="HmsDb-Web.config Connection String" description="HmsDb Connection String used in web.config by the application to access the database." defaultValue="data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Hmsdb.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="I:\\HospitalManagement\\HospitalManagement\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='HmsDb']/@connectionString" />
+  </parameter>
+</parameters>

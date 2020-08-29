@@ -1,0 +1,70 @@
+﻿@model HospitalManagement.Models.Bill
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<br />
+<div class="btn btn-warning">
+    @Html.ActionLink("Print", "PrintPDF")
+</div>
+<br />
+<div>
+    <h4>Bill</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dischargedate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dischargedate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BillId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

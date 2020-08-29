@@ -1,0 +1,46 @@
+﻿@model HospitalManagement.Models.Patient
+@{
+    ViewBag.Title = "forgot";
+}
+<style>
+    .form-control {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+</style>
+<h2>forgot</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+
+        <div class="form-group">
+            @Html.Label("Enter Email: ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Email, new { placeholder = "Enter Email", htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Send OTP" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
